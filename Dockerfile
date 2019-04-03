@@ -10,7 +10,7 @@ WORKDIR /root
 # Update the system, download any packages essential for the project
 RUN dpkg --add-architecture i386
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y git build-essential make gcc vim gdb radare2 openssh-server libc6:i386 libstdc++6:i386 libseccomp2:i386 
+RUN apt-get install -y git build-essential make gcc python python-pip vim gdb radare2 openssh-server libc6:i386 libstdc++6:i386 libseccomp2:i386 
 
 # SSH config
 RUN mkdir /root/.ssh
